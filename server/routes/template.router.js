@@ -1,13 +1,15 @@
 const express = require('express');
 const router = express.Router()
+const pool = require('../modules/pool');
 const axios = require('axios');
 
 
-router.get('/api/test', (req, res) => {
+router.get('/', (req, res) => {
+    console.log('here?')
     try{
        const queryText = `
         SELECT * from "test"
-            WHERE "id=$1;
+            WHERE "id"=$1;
        `
        const queryVal = ['1']
        pool.query(queryText, queryVal)

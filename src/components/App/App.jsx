@@ -1,12 +1,24 @@
 import './App.css'
+import axios from 'axios'
 
-
+const testDB = () => {
+    console.log('Click?')
+    axios({
+        method: 'GET',
+        url: '/api/test'
+    }).then((response) => {
+        console.log('response:', response)
+    }).catch((error) => {
+        console.log('GET error', error)
+    })
+}
+    
 
 
 
 function App(){
     return(
-        <h1>Is this thing on?</h1>
+        <button onClick={testDB}>TEST</button>
     )
 }
 

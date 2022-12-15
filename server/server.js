@@ -6,11 +6,11 @@ const bodyParser = require('body-parser');
 
 //constants for router files here
 // const  = require('./routes/')
-
+    const testRouter = require('./routes/template.router')
 
 //listens for axios requests
 // app.use('api//', w/e)
-
+    app.use('/api/test', testRouter)
 
 // Body parser middleware
 app.use(bodyParser.json());
