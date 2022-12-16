@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //for what we always have on page
 app.use(express.static('build'));
 
-// App Set //
+// App Set Port//
 const PORT = process.env.PORT || 5000;
 
 /** Listen * */

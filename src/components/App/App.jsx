@@ -1,6 +1,10 @@
 import './App.css'
 import axios from 'axios'
+import { useState } from 'react'
 
+
+
+//Test GET route, currently retrieves everything in the test table
 const testDB = () => {
     console.log('Click?')
     axios({
@@ -12,13 +16,39 @@ const testDB = () => {
         console.log('GET error', error)
     })
 }
+
+
     
 
 
 
 function App(){
+    const [newName, setNewName] = useState('');
+    
+    const testPost = () => {
+        event.preventDefault()
+        console.log('name = ', newName)
+    }
+
+    const testDel = () => {
+        console.log('ID to del:')
+    }
+    const testUpdate = () => {
+        console.log('ID to update:')
+    }
+
     return(
-        <button onClick={testDB}>TEST</button>
+        <>
+            <form>
+                <label htmlFor='newName'>
+                    <input type="text" value={newName} name="newName" onChange={(event) => setNewName(event.target.value)} />
+                </label>
+                <button onClick={testPost}>TEST POST</button>
+            </form>
+            <button onClick={testDB}>TEST GET</button>
+            <button onClick={testDel}>TEST DEL</button>
+            <button onClick={testUpdate}>TEST UPDATE</button>
+        </>
     )
 }
 

@@ -3,10 +3,11 @@ const router = express.Router()
 const pool = require('../modules/pool');
 const axios = require('axios');
 
-
+//Test get route
 router.get('/', (req, res) => {
     console.log('here?')
     try{
+        //Select everyting from table with id 1
        const queryText = `
         SELECT * from "test"
             WHERE "id"=$1;
