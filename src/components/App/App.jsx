@@ -1,6 +1,7 @@
 import './App.css'
 import axios from 'axios'
 import { useState } from 'react'
+import MultiplicationTable from '../MultiplicationTable/MultTable'
 
 
 
@@ -48,6 +49,7 @@ function App(){
             <button onClick={testDB}>TEST GET</button>
             <button onClick={testDel}>TEST DEL</button>
             <button onClick={testUpdate}>TEST UPDATE</button>
+            <MultiplicationTable multiplier={3}></MultiplicationTable>
         </>
     )
 }
