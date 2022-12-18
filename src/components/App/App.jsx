@@ -25,6 +25,7 @@ const testDB = () => {
 
 function App(){
     const [newName, setNewName] = useState('');
+    const [test, setTest] = useState(12)
     
     const testPost = () => {
         event.preventDefault()
@@ -41,15 +42,17 @@ function App(){
     return(
         <>
             <form>
-                <label htmlFor='newName'>
+                <label htmlFor='newName'>Please Enter Your Name:
                     <input type="text" value={newName} name="newName" onChange={(event) => setNewName(event.target.value)} />
                 </label>
-                <button onClick={testPost}>TEST POST</button>
+                <button onClick={testPost}>Enter</button>
             </form>
-            <button onClick={testDB}>TEST GET</button>
+            <button onClick={testDB}>Display High Scores</button>
             <button onClick={testDel}>TEST DEL</button>
             <button onClick={testUpdate}>TEST UPDATE</button>
-            <MultiplicationTable multiplier={3}></MultiplicationTable>
+            <label>What number would you like to practice? <input type='number' value={test} onChange={(event) => {setTest(event.target.value)}}></input></label>
+            <MultiplicationTable multiplier={test}></MultiplicationTable>
+            <button>Check Answers</button>
         </>
     )
 }
