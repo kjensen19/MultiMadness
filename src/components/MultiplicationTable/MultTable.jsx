@@ -1,6 +1,7 @@
-
+import { useState } from "react"
 
 function MultiplicationTable({ multiplier }){
+    const [answer, setAnswer] = useState('')
     const multiArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     var multiObject = []
     function tableMaker(multiplier){
@@ -8,7 +9,6 @@ function MultiplicationTable({ multiplier }){
             multiObject.push({
                 multiplicand: num,
                 multiplier: multiplier,
-                product: num * multiplier
             })
         }
     }
@@ -18,7 +18,16 @@ function MultiplicationTable({ multiplier }){
 
     return(
         <ul>{multiObject.map((mult,i) =>(
-            <li key={i}>{mult.multiplicand}<br></br>*<br></br>{mult.multiplier}</li>))}
+            <li key={i}>
+                <div>
+                    <p>{mult.multiplicand}</p>
+                    <p>X</p>
+                    <p>{mult.multiplier}</p>
+                    <p>_____</p>
+                    <input type='text' value={answer} onChange={(event)=>{setAnswer(event.target.value)}}></input>
+                </div>
+                </li>))}
+                
         </ul>
     )
 }
