@@ -7,7 +7,7 @@ import MultiplicationTable from '../MultiplicationTable/MultTable'
 
 //Test GET route, currently retrieves everything in the test table
 const testDB = () => {
-    console.log('Click?')
+    console.log('List of scores from the DB')
     axios({
         method: 'GET',
         url: '/api/test'
