@@ -2,6 +2,7 @@ import './App.css'
 import axios from 'axios'
 import { useState } from 'react'
 import MultiplicationTable from '../MultiplicationTable/MultTable'
+import Clock from './Timer/Clock'
 
 
 
@@ -41,6 +42,7 @@ function App(){
 
     return(
         <>
+            <Clock />
             <form>
                 <label htmlFor='newName'>Please Enter Your Name:
                     <input type="text" value={newName} name="newName" onChange={(event) => setNewName(event.target.value)} />

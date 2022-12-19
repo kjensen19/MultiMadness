@@ -13,9 +13,6 @@ function MultiplicationTable({ multiplier }){
           
               // swap elements multiArray[i] and multiArray[j]
               // we use "destructuring assignment" syntax to achieve that
-              // you'll find more details about that syntax in later chapters
-              // same can be written as:
-              // let t = multiArray[i]; multiArray[i] = multiArray[j]; multiArray[j] = t
               [multiArray[i], multiArray[j]] = [multiArray[j], multiArray[i]];
             }
           }
@@ -37,7 +34,6 @@ function MultiplicationTable({ multiplier }){
             {multiObject.map((mult,i) =>(
                 <MultItem mult={mult} />
             ))}
-           
         </div>
     )
 }
