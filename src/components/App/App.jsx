@@ -9,6 +9,7 @@ import Clock from './Timer/Clock'
 //Test GET route, currently retrieves everything in the test table
 const testDB = () => {
     console.log('List of scores from the DB')
+    //Need to add to data: name, multiplier
     axios({
         method: 'GET',
         url: '/api/test'
@@ -29,6 +30,7 @@ function App(){
     const [test, setTest] = useState(12)
     
     const testPost = () => {
+        //Use to add new scores to DB when test is complete
         event.preventDefault()
         console.log('name = ', newName)
     }
