@@ -3,7 +3,7 @@ import React from "react";
 
 export default function TimerButtons(props) {
 const StartButton = (
-	<div className="btn btn-one btn-start"
+	<div className="startButton"
 		onClick={props.handleStart}>
 	Start
 	</div>
@@ -22,7 +22,7 @@ const ActiveButtons = (
 );
 
 return (
-	<div className="Control-Buttons">
+	<div className="controlButtons">
 	<div>{props.active ? ActiveButtons : StartButton}</div>
 	</div>
 );
