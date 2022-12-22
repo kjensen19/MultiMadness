@@ -18,7 +18,7 @@
 .MultsInput{
     height: 4rem;
     font-size: 2.5rem;
-    width: 6rem
+    width: 6rem;
 }
 
 .listContainer{
@@ -29,4 +29,12 @@
     background-color: blueviolet;
     align-items: center;
     justify-content: center;
+}
+
+.correct{
+    background-color: chartreuse;
+}
+
+.incorrect{
+    background-color: red;
 }

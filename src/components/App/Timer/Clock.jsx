@@ -34,6 +34,8 @@ const handlePauseResume = () => {
 
 const handleReset = () => {
 	setIsActive(false);
+	
+
 	setTime(0);
 };
 

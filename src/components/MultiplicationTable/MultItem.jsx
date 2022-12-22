@@ -5,11 +5,13 @@ import './Mult.css'
 function MultItem({ mult }){
     const [answer, setAnswer] = useState('')
 
+    const rightAnswer = mult.multiplicand * mult.multiplier
+
         return(
             <div className="MultContainer">
                 <p className='Mults'>{mult.multiplicand} X {mult.multiplier}</p>
                 <p className="Mults"> = </p>
-                <input className="MultsInput" type='text' value={answer} onChange={(event)=>{setAnswer(event.target.value)}}></input>
+                    <input className={`MultsInput ${answer == rightAnswer ? 'correct' : 'incorrect'}`} type='text' value={answer} onChange={(event)=>{setAnswer(event.target.value)}}></input>
             </div>
             )
 }
