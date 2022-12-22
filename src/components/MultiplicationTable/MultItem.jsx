@@ -11,7 +11,7 @@ function MultItem({ mult }){
             <div className="MultContainer">
                 <p className='Mults'>{mult.multiplicand} X {mult.multiplier}</p>
                 <p className="Mults"> = </p>
-                    <input className={`MultsInput ${answer == rightAnswer ? 'correct' : 'incorrect'}`} type='text' value={answer} onChange={(event)=>{setAnswer(event.target.value)}}></input>
+                    <input className={`MultsInput ${Number(answer) === rightAnswer ? 'correct' : 'incorrect'}`} type='text' value={answer} onChange={(event)=>{setAnswer(event.target.value)}}></input>
             </div>
             )
 }
