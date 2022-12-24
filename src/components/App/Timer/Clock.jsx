@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Timer from "./Timer";
 import TimerButtons from "./TimerButtons";
 
-function Clock() {
+function Clock( { time, setTime } ) {
 const [isActive, setIsActive] = useState(false);
 const [isPaused, setIsPaused] = useState(true);
-const [time, setTime] = useState(0);
+
 
 React.useEffect(() => {
 	let interval = null;
@@ -34,6 +34,8 @@ const handlePauseResume = () => {
 
 const handleReset = () => {
 	setIsActive(false);
+	// Need to trigger answer check here
+	// Then fire POST request to store time, number, etc
 	
 
 	setTime(0);

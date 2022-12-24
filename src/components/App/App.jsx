@@ -28,6 +28,7 @@ const testDB = () => {
 function App(){
     const [newName, setNewName] = useState('');
     const [test, setTest] = useState(12)
+    const [time, setTime] = useState(0);
     
     const testPost = () => {
         //Use to add new scores to DB when test is complete
@@ -54,7 +55,7 @@ function App(){
             <button onClick={testDel}>TEST DEL</button>
             <button onClick={testUpdate}>TEST UPDATE</button>
             <label>What number would you like to practice? <input type='number' value={test} onChange={(event) => {setTest(event.target.value)}}></input></label>
-            <Clock />
+            <Clock time={time} setTime={setTime}/>
             <MultiplicationTable multiplier={test}></MultiplicationTable>
             <button>Check Answers</button>
         </>

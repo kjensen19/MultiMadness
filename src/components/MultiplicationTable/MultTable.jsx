@@ -32,7 +32,7 @@ function MultiplicationTable({ multiplier }){
     return(
         <div className="listContainer">
             {multiObject && multiObject.map((mult,i) =>(
-                <MultItem mult={mult} />
+                <MultItem mult={mult} key={i}/>
             ))}
         </div>
     )
