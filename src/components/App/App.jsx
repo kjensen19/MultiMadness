@@ -55,7 +55,7 @@ function App(){
             <button onClick={testDel}>TEST DEL</button>
             <button onClick={testUpdate}>TEST UPDATE</button>
             <label>What number would you like to practice? <input type='number' value={test} onChange={(event) => {setTest(event.target.value)}}></input></label>
-            <Clock time={time} setTime={setTime}/>
+            <Clock />
             <MultiplicationTable multiplier={test}></MultiplicationTable>
             <button>Check Answers</button>
         </>
