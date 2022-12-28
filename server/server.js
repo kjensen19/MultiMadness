@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
     const testRouter = require('./routes/template.router')
 
 //listens for axios requests
-// app.use('api//', w/e)
+// app.use('api/', w/e)
     app.use('/api/test', testRouter)
 
 // Body parser middleware

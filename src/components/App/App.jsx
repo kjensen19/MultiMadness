@@ -33,6 +33,15 @@ function App(){
         //Use to add new scores to DB when test is complete
         event.preventDefault()
         console.log('name = ', newName)
+        axios({
+            method: 'POST',
+            url: '/api/test',
+            data: newName
+        }).then((response) => {
+            console.log('Response in POST', response)
+        }).catch((error) => {
+            console.log('Error in POST', error)
+        })
     }
 
     const testDel = () => {
